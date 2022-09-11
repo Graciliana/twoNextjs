@@ -1,13 +1,13 @@
 import { createContext } from "react";
 
 const AppContext = createContext({
-  nome: null
+tema: "nome",
 })
 
-export function AppProvider(){
+export function AppProvider(props:any){
   return (
     <AppContext.Provider value={{
-      nome: 'Teste Context API'
+      tema: 'dark'
     }}>
       {props.children}
     </AppContext.Provider>
