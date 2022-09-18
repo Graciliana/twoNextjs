@@ -6,9 +6,8 @@ import { AppProvider } from '../data/context/AppContext'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppProvider>
-      <Component {...pageProps} />
-    
-</AppProvider>
+      <Component {...pageProps} />  
+    </AppProvider>
   )
 }
 

@@ -1,18 +1,29 @@
-import { createContext } from "react";
+import { type } from "os"
+import { createContext, useState } from "react"
+type Tema = 'dark' | '' |'light'
+interface AppContextProps {
+  tema?: Tema
+  alternarTema?: () => void
 
-const AppContext = createContext({
-tema: "nome",
+}
+const AppContext = createContext<AppContextProps>({
 })
 
 export function AppProvider(props:any){
-  return (
+const [tema, setTema] = useState<Tema>('dark')
+function alternarTema() {
+ setTema(tema === '' ? 'dark': '')
+}
+ 
+  
+return (
     <AppContext.Provider value={{
-      tema: 'dark'
+      tema,
+      alternarTema
     }}>
       {props.children}
     </AppContext.Provider>
   )
 }
-
-export default AppContext
 export const AppConsumer = AppContext.Consumer
+export default AppContext
