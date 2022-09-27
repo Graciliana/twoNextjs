@@ -1,15 +1,11 @@
-
 import Layout from '../components/template/Layout'
-
-
-export default function Notificacoes(){
-
+export default function Notificacoes() {
   return (
-    <Layout titulo = "Notificações"
-    subtitulo="Aqui você irá gerenciar as suas notificaçoes"
+    <Layout
+      titulo="Notificações"
+      subtitulo="Aqui você irá gerenciar as suas notificaçoes"
     >
-     <h1>Notificação</h1>
+      <h1>Notificação</h1>
     </Layout>
-   
   )
 }
